@@ -181,19 +181,19 @@ if __name__ == "__main__":
     L = np.pi  # Half-period for all functions
     terms = 10  # Number of terms in Fourier series
 
-    fourier_series = FourierSeries(lambda x: target_function(x, function_type='triangle'), L, terms)
+    # fourier_series = FourierSeries(lambda x: target_function(x, function_type='triangle'), L, terms)
         
         # Plot the Fourier series approximation
-    fourier_series.plot()
+    # fourier_series.plot()
 
 
     # Test each type of target function
 
-    # for function_type in ["square", "sawtooth", "triangle", "sine", "cosine"]:
-    #     print(f"Plotting Fourier series for {function_type} wave:")
+    for function_type in ["square", "sawtooth", "triangle", "sine", "cosine"]:
+        print(f"Plotting Fourier series for {function_type} wave:")
         
-    #     # Define the target function dynamically
-    #     fourier_series = FourierSeries(lambda x: target_function(x, function_type=function_type), L, terms)
+        # Define the target function dynamically
+        fourier_series = FourierSeries(lambda x: target_function(x, function_type=function_type), L, terms)
         
-    #     # Plot the Fourier series approximation
-    #     fourier_series.plot()
+        # Plot the Fourier series approximation
+        fourier_series.plot()
